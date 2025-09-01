@@ -92,16 +92,6 @@ body {
   gap: 12px;
 }
 
-@media (max-width: 600px) {
-  .bottom-nav {
-  display: flex;
-  flex-wrap: nowrap;    /* Prevent wrapping */
-  overflow-x: auto;     /* Allow horizontal scrolling */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-  justify-content: flex-start; /* Align items to start */
-  gap: 12px;            /* Keep spacing between items */
-}
-
 .bottom-nav a {
   white-space: nowrap;  /* Prevent link text from wrapping */
 }
@@ -115,7 +105,6 @@ body {
   white-space: nowrap;
 }
 
-}
 .bottom-nav a:hover {
   color: var(--dusty-rose);
 }
@@ -360,64 +349,46 @@ body {
   margin: 0;
 }
 
-@media (max-width: 768px) {
-  /* Apply mobile-friendly styles here */
+.bottom-nav {
+  scrollbar-width: none; /* Firefox */
+}
+.bottom-nav::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
-@media (max-width: 768px) {
-  .section {
-    padding: 0 20px;
-    margin: 40px 0;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .scroll-down {
-    font-size: 1.5rem;
-  }
-
-  .traits-inline {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    text-align: center;
-  }
-}
 
 @media (max-width: 600px) {
-  .bottom-nav ul {
+  /* Nav */
+  .bottom-nav {
+    display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    gap: 10px;
-    padding: 10px;
+    -webkit-overflow-scrolling: touch;
     justify-content: flex-start;
+    gap: 12px;
   }
 
   .bottom-nav a {
     white-space: nowrap;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .projects-grid,
-  .card-grid,
-  .org-list {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
-  .flip-card {
-    aspect-ratio: auto; /* Prevent tight squeeze on small screens */
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
-}
 
-@media (max-width: 600px) {
+  /* Cards */
+  .card-section .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .flip-inner {
+    aspect-ratio: 3 / 4;
+  }
+
+  /* Footer */
   .social-icons {
     flex-wrap: wrap;
     gap: 15px;
@@ -427,9 +398,8 @@ body {
     font-size: 0.9rem;
     padding: 15px 10px;
   }
-}
 
-@media (max-width: 600px) {
+  /* Optional tweak */
   .scroll-down {
     animation: none;
   }
