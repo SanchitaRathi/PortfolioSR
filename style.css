@@ -259,11 +259,6 @@ body {
   justify-content: center; /* leftover card centers automatically */
 }
 
-.flip-card {
-  height: 350px; /* desktop */
-  min-height: 350px;
-}
-
 .card:hover,
 .flip-card:hover {
   transform: translateY(-5px);
@@ -282,8 +277,6 @@ body {
 .card {
   max-width: 100%;
   overflow-wrap: break-word; /* Ensures text doesn’t push the card wider */
-  height: auto;       /* content dictates height */
-  min-height: 0;      /* optional */
 }
 
 
@@ -296,6 +289,11 @@ body {
   color: var(--dusty-rose);
   text-decoration: none;
   font-weight: bold;
+}
+
+.card-section .card-grid .card {
+  height: auto !important;
+  min-height: 0 !important;
 }
 
 .card a:hover {
