@@ -15,14 +15,14 @@ body {
 }
 
 .back-link {
-  color: var(--cream); /* Or try var(--dusty-rose) */
+  color: var(--cream);
   font-weight: 500;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .back-link:hover {
-  color: var(--dusty-rose); /* Lighter on hover */
+  color: var(--dusty-rose);
   text-decoration: underline;
 }
 
@@ -33,7 +33,27 @@ body {
   padding: 1.5rem;
   background-color: var(--white);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(75, 56, 50, 0.1); /* subtle espresso shadow */
+  box-shadow: 0 4px 12px rgba(75, 56, 50, 0.1);
+}
+
+/* Center heading and explore line */
+.poster-gallery h2,
+.poster-gallery p.explore {
+  text-align: center;
+  margin: 0.5rem 0;
+  color: var(--espresso);
+}
+
+.poster-gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.poster-gallery p.explore {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  color: var(--dusty-rose);
 }
 
 /* Grid setup */
@@ -63,7 +83,7 @@ body {
 /* Image styling */
 .poster-grid .card img {
   width: 100%;
-  height: 180px; /* fixed height */
+  height: 180px;
   object-fit: cover;
   border-radius: 8px;
   border-bottom: 2px solid var(--espresso);
@@ -100,7 +120,6 @@ body {
   color: var(--espresso);
 }
 
-/* Ensure no extra space from paragraph tags inside footer */
 .site-footer p {
   margin: 0;
 }
