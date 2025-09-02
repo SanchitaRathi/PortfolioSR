@@ -157,8 +157,7 @@ body {
 .flip-inner {
   position: relative;
   width: 100%;
-  height: auto; /* Allows dynamic height based on content */
-  aspect-ratio: 1; /* Maintains square shape without hacks */
+  height: auto;          /* let content dictate height */
   transform-style: preserve-3d;
   transition: transform 0.6s;
 }
@@ -402,20 +401,22 @@ body {
     gap: 12px;
   }
 
-  /* Cards */
- /* Cards */
-.card-section .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
-  justify-content: center; /* ensures last card centers */
-}
+  .flip-inner {
+    aspect-ratio: auto;  /* remove fixed ratio on small screens */
+  }
 
-.card {
-  max-width: 100%;
-  overflow-wrap: break-word;
-  box-sizing: border-box; /* prevent padding/border overflow */
-}
+  /* Cards */
+.card-section .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: center;   /* centers leftover */
+    gap: 12px;
+  }
+
+  .card-section .card-grid .card:last-child:nth-child(odd) {
+    grid-column: span 2;       /* makes the last single card take both columns, centered */
+    justify-self: center;      /* center it horizontally */
+  }
 
   
   /* Footer */
