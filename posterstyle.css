@@ -14,6 +14,16 @@ body {
   padding: 0;
 }
 
+header.section {
+  text-align: center; /* center all content inside header */
+}
+
+header.section h1,
+header.section p {
+  margin: 0 auto; /* optional, ensures centered block */
+}
+
+
 .back-link {
   color: var(--cream);
   font-weight: 500;
