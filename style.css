@@ -259,7 +259,6 @@ body {
   justify-content: center; /* leftover card centers automatically */
 }
 
-.card,
 .flip-card {
   height: 350px; /* desktop */
   min-height: 350px;
@@ -283,6 +282,8 @@ body {
 .card {
   max-width: 100%;
   overflow-wrap: break-word; /* Ensures text doesn’t push the card wider */
+  height: auto;       /* content dictates height */
+  min-height: 0;      /* optional */
 }
 
 
