@@ -206,9 +206,9 @@ body {
 
 .projects .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  align-items: stretch;   /* ensures all cards in the row match height */
+  align-items: stretch;
 }
 
 .projects .flip-card {
@@ -423,7 +423,7 @@ body {
   }
 
   /* Projects */
-  .projects-grid {
+  .projects .projects-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
